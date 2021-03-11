@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: linear-gradient(to right,#ff9966 , #ff5e62);
+            display: flex;
+}
+
+        
+        
+        
+        form{
+    text-align: center;
+    padding: 2px 3px;
+    font-size: 18px;
+   font-family: 'Signika', sans-serif;
+
+  
+}
+.login {
+    background-color: white;
+    width: 33%;
+    color: black;
+    transition: transform .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ align-content: center;
+ width: fit-content;
+ height: fit-content;
+ 
+margin: 37px 5px;
+}
+.login input{
+  font-family: 'Signika', sans-serif;
+}
+form input{
+
+border: 3px solid black;
+width: 65%;
+border-radius: 10px;
+text-align: center;
+font-size: 18px;
+
+}
+.login:hover{
+    background-color: silver;
+    transform: scale(1.0);
+}
+    
+.btn{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 18%;
+    height: 25px;
+}
+.btn:hover{
+    background-color: cadetblue;
+}
+    </style>
+</head>
+<body>
+<div class="login">
+	<h1 style="font-family: 'Signika', sans-serif;text-align: center;">Fill the details to check your burned Calories.</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+
+<input type="text" name="gender" placeholder="Enter 1 for male 0 for Female" required="required"><br><br>
+<input type="text" name="Age" placeholder="Age" required="required"><br><br>
+<input type="text" name="Height" placeholder="Enter height in cm" required="required"><br><br>
+<input type="text" name="Weight" placeholder="Enter weight in kg" required="required"><br><br>
+<input type="text" name="Duration" placeholder="Duration" required="required"><br><br>
+<input type="text" name="Heart_rate" placeholder="Heart_rate" required="required"><br><br>
+<input type="text" name="Body_temp" placeholder="Body_temp" required="required"><br><br>
+<button type="submit" class="btn">Check</button>
+<br>
+<br>
+
+    </form>
+    
+    
+    </div>
+</body>
+</html>
